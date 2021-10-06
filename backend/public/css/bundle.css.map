@@ -1,0 +1,1 @@
+{"version":3,"file":"css/bundle.css","mappings":"AAAA;IACI,kBAAkB;AACtB;;AAEA;IACI,uBAAuB;AAC3B,C","sources":["webpack://JavaScript_fullstack_simple/./frontend/styles/styles.css"],"sourcesContent":["body{\r\n    background: yellow;\r\n}\r\n\r\nh1{\r\n    color: green !important;\r\n}"],"names":[],"sourceRoot":""}
