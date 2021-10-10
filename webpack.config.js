@@ -9,10 +9,10 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 /* Indicamos donde esta el codigo del frontend para poder exportarlo a otra carpeta */
 
-module.exports ={
-    mode: 'development',
+module.exports = {
+    mode: 'production',
     //Archivo principal js del proyecto.
-    entry: '/frontend/app.js',
+    entry: './frontend/app.js',
     output: {
         path: path.join(__dirname, 'backend/public'),
         filename: 'js/bundle.js'

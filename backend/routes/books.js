@@ -2,6 +2,10 @@
 const { Router } = require("express");
 //Guardamos en una constante el Objeto generado por el Metodo Roter.
 const router = Router();
+//Para manejar los archivos y eliminar las imagenes
+const {unlink} = require ('fs-extra');
+//Para manejar las rutas
+const path = require('path');
 //Importamos el Modelo Books
 const Book = require("../models/Book");
 
@@ -21,7 +25,8 @@ router.post("/", async (req, res) => {
 });
 /* Ruta eliminar book */
 router.delete("/:id", async (req, res) => {
-  await Book.findOneAndDelete(req.params.id);
+  const book = await Book.findByIdAndDelete(req.params.id);
+  unlink(path.resolve('./backend/public'+book.imagePath));
   res.json({message: 'Book Deleted'});
 });
 
