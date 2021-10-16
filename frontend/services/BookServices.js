@@ -2,7 +2,7 @@ class BookServices{
 
     constructor(){
         //Direccion de la API (backend)
-        this.URI = "http://localhost:3000/api/books";
+        this.URI = "/api/books";
     }
 
         //METODOS
